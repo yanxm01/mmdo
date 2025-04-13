@@ -3924,24 +3924,29 @@
   <div class="container">
     <h3>Workshop Agenda</h3>
 
-    <table style="font-size:14; width:100%; border: 1px solid blue; border-spacing: 5px">
+    <table style="font-size:14; width:100%; border: 1px solid blue; border-spacing: 2px;table-layout: fixed;border-collapse: separate;" id="agenda">
       <colgroup>
         <col span="1" style="width: 15%;">
         <col span="1" style="width: 85%;">
       </colgroup>
       <tbody>
-        <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
+        <style>
+          #agenda tr:nth-child(odd) {
+            background-color: #e1e1e1; /* 灰色 */
+          }
+          #agenda tr:nth-child(even) {
+            background-color: #f0f0f0; /* 白色 */
+          }
+          #agenda td {
+            padding: 8px; /* 增加单元格内边距，确保内容间隔美观 */
+          }
+        </style>
+
+        <tr style="background-color: #a5a5a5;">
+          <td align="center"><b style="font-size: 16px;">Time</b></td>
+          <td align="center"><b style="font-size: 16px;">Event</b></td>
         </tr>
-        <tr>
-          <td align="center"><b>Time</b></td>
-          <td align="center"><b>Event</b></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
+
 
         <tr>
           <td align="center" style="vertical-align:top">08:45 am – 09:00 am</td>
@@ -4036,11 +4041,11 @@
           <td align="center" style="vertical-align:top">16:30 pm – 16:45 pm</td>
           <td><b>Award Ceremony</b></td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
-        </tr>
+        </tr> -->
       </tbody>
     </table>
   </div>
@@ -4053,18 +4058,21 @@
       <tbody>
 
         <tr class="container" id="k2">
-          <td style="vertical-align:top"><img border="0" width="100" src="./MMDO_FILES/jyc.jpg"></td>
-          <td>&nbsp;&nbsp;&nbsp;</td>
           <td style="vertical-align:top">
-            <h5>
-              <p><b>Talk Title:</b> Data-driven Federated Optimisation: From Small Surrogates to LLMs
-
-              </p>
-              <span><b>Speaker:</b> <a href="https://en.westlake.edu.cn/faculty/yaochu-jin.html" target="_blank">Yaochu
-                  Jin</a>, Chair Professor of AI, Westlake University
-              </span>
-              <br>
-              <span><b>Biography</b>
+            <img border="0" width="156" height="195" src="./MMDO_FILES/jyc-clip.png">
+            <span style="font-size: 16px;display: block;text-align: center;padding-top: 8px;">
+              <a href="https://en.westlake.edu.cn/faculty/yaochu-jin.html" target="_blank">YaochuJin</a>
+              <br><span style="font-size: 12px;">Chair Professor of AI,</span>
+              <br><span style="font-size: 12px;">Westlake University</span>
+            </span>
+          </td>
+          <td>&nbsp;&nbsp;&nbsp;</td>
+          <td style="vertical-align:top;padding: 0px 23px;">
+            <h5 style="margin-top:0">
+              <p style="font-size: 16px;"><b>Talk Title: Data-driven Federated Optimisation: From Small Surrogates to LLMs</b></p>
+             
+              <span style="line-height: 1.2;">
+                <!-- <b>Biography</b> -->
                 <br>He was an Alexander von Humboldt Professor for AI endowed by the German Federal Ministry of
                 Education and Research, Faculty of Technology, Bielefeld University, Germany. He is also a Distinguished
                 Chair in Computational Intelligence, Department of Computer Science, University of Surrey, Guildford
@@ -4078,74 +4086,78 @@
                 IEEE Transactions on Cognitive and Developmental Systems. He is the recipient of the 2025 IEEE Frank
                 Rosenblatt Award. He was named by the Web of Science as “a Highly Cited Researcher” from 2019 to 2024
                 consecutively. He is a Member of Academia Europaea.
-
               </span>
             </h5>
           </td>
         </tr>
 
+        <td>&nbsp;</td>
+        <tr><td>&nbsp;</td></tr>
 
         <tr class="container" id="k3">
           <td style="vertical-align:top">
-            <img border="0" width="100" src="./MMDO_FILES/oys.png">
+            <img border="0" width="156" height="156" src="./MMDO_FILES/oys.png">
+            <span style="font-size: 16px;display: block;text-align: center;padding-top: 8px;">
+              <a href="https://www.mmdo.org.cn/workshop/cec2025/" target="_blank">Yew-Soon Ong</a>
+              <br><span style="font-size: 12px;">President's Chair Professor of Computer Science,</span>
+              <br><span style="font-size: 12px;">Nanyang Technological University (NTU)</span>
+            </span>
           </td>
           <td>&nbsp;&nbsp;&nbsp;</td>
-          <td style="vertical-align:top">
-            <h5>
-              <p><b>Talk Title: </b><span>TBD</span>
-
-              </p>
-              <span><b>Speaker:</b> <a href="https://www.mmdo.org.cn/workshop/cec2025/" target="_blank">Yew-Soon
-                  Ong</a>, President's Chair Professor of Computer Science, Nanyang Technological University (NTU)
+          <td style="vertical-align:top; padding: 0px 23px;">
+            <h5 style="margin-top:0">
+              <p style="font-size: 16px;"><b>Talk Title: TBD</b></p>
 
               </span>
-              <br>
-              <span><b>Biography</b>
+              <span style="line-height: 1.2;">
+                <!-- <b>Biography</b> -->
                 <br>TBD
               </span>
             </h5>
           </td>
         </tr>
         <td>&nbsp;</td>
+        <tr><td>&nbsp;</td></tr>
 
         <tr class="container" id="k3">
           <td style="vertical-align:top">
-            <img border="0" width="100" src="./MMDO_FILES/za.png">
+            <img border="0" width="156" height="195" src="./MMDO_FILES/za.png">
+            <span style="font-size: 16px;display: block;text-align: center;padding-top: 8px;">
+              <a href="https://www.mmdo.org.cn/workshop/cec2025/" target="_blank">Aimin Zhou</a>
+              <br><span style="font-size: 12px;">Professor,</span>
+              <br><span style="font-size: 12px;">East China Normal University</span>
+            </span>
           </td>
           <td>&nbsp;&nbsp;&nbsp;</td>
-          <td style="vertical-align:top">
-            <h5>
-              <p><b>Talk Title: </b><span>TBD</span>
-
-              </p>
-              <span><b>Speaker:</b> <a href="https://www.mmdo.org.cn/workshop/cec2025/" target="_blank">Aimin Zhou</a>,
-                Professor, East China Normal University
-
-              </span>
-              <br>
-              <span><b>Biography</b>
+          <td style="vertical-align:top; padding: 0px 23px;">
+            <h5 style="margin-top:0">
+              <p style="font-size: 16px;"><b>Talk Title: TBD</b></p>
+              <span>
+                <!-- <b>Biography</b> -->
                 <br>TBD
               </span>
             </h5>
           </td>
         </tr>
         <td>&nbsp;</td>
+        <tr><td>&nbsp;</td></tr>
 
         <tr class="container" id="k5">
-          <td style="vertical-align:top"><img border="0" width="100" src="./MMDO_FILES/ryz_clip.png"></td>
-          <td>&nbsp;&nbsp;&nbsp;</td>
           <td style="vertical-align:top">
-            <h5>
-              <p><b>Talk Title:</b> The Theory of Multi-View Learning and Its Applications
+            <img border="0" width="156" height="195" src="./MMDO_FILES/ryz.png">
+            <span style="font-size: 16px;display: block;text-align: center;padding-top: 8px;">
+              <a href="https://yazhou-ren.github.io/index.html" target="_blank">Yazhou Ren</a>
+              <br><span style="font-size: 12px;">Associate Professor,</span>
+              <br><span style="font-size: 12px;">University of Electronic Science and Technology of China</span>
+            </span>
+          </td>
+          <td>&nbsp;&nbsp;&nbsp;</td>
+          <td style="vertical-align:top; padding: 0px 23px;">
+            <h5 style="margin-top:0">
+              <p style="font-size: 16px;"><b>Talk Title: The Theory of Multi-View Learning and Its Applications</b></p>
 
-              </p>
-              <span><b>Speaker:</b> <a href="https://yazhou-ren.github.io/index.html" target="_blank">Yazhou
-                  Ren</a>, Associate Professor, University of Electronic Science and Technology of
-                China
-
-              </span>
-              <br>
-              <span><b>Biography</b>
+              <span>
+                <!-- <b>Biography</b> -->
                 <br>Yazhou Ren is currently an Associate Professor with the School of Computer Science and Engineering,
                 University of Electronic Science and Technology of China (UESTC), Chengdu, China. He received the B.Sc.
                 degree in information and computation science and the Ph.D. degree in computer science from the South
@@ -4169,20 +4181,24 @@
         </tr>
 
         <td>&nbsp;</td>
+        <tr><td>&nbsp;</td></tr>
 
         <tr class="container" id="k5">
-          <td style="vertical-align:top"><img border="0" width="100" src="./MMDO_FILES/lzc.png"></td>
-          <td>&nbsp;&nbsp;&nbsp;</td>
           <td style="vertical-align:top">
-            <h5>
-              <p><b>Talk Title:</b> Large Language Models for Algorithm Design
+            <img border="0" width="162" height="142.4" src="./MMDO_FILES/lzc.png">
+            <span style="font-size: 16px;display: block;text-align: center;padding-top: 8px;">
+              <a href="https://www.cs.cityu.edu.hk/~zhichalu/" target="_blank">Zhichao Lu</a>
+              <br><span style="font-size: 12px;">Associate Professor,</span>
+              <br><span style="font-size: 12px;">City University of Hong Kong (CityUHK)</span>
+            </span>
+          </td>
+          <td>&nbsp;&nbsp;&nbsp;</td>
+          <td style="vertical-align:top; padding: 0px 23px;">
+            <h5 style="margin-top:0">
+              <p style="font-size: 16px;"><b>Talk Title: Large Language Models for Algorithm Design</b></p>
 
-              </p>
-              <span><b>Speaker:</b> <a href="https://www.cs.cityu.edu.hk/~zhichalu/" target="_blank">Zhichao Lu</a>,
-                Assistant Professor, City University of Hong Kong (CityUHK)
-              </span>
-              <br>
-              <span><b>Biography</b>
+              <span>
+                <!-- <b>Biography</b> -->
                 <br>TBD
 
               </span>
