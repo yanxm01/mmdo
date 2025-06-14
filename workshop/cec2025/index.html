@@ -3860,10 +3860,11 @@
     /* 容器样式 */
         .swiper {
             width: 100%;
-            height: 270px; /* 限制最大宽度，防止过宽 */
+            height: 700px;
+            max-height: 800px;
             margin: 0 auto;
             overflow: hidden;
-            max-width: 996px;
+            /* max-width: 996px; */
         }
 
         .swiper-slide {
@@ -3880,8 +3881,8 @@
             height: auto; /* 保持比例 */
             object-fit: contain; /* 确保图片完整显示 */
             display: block;
-            /* max-width: 996px; */
-            max-height: 270px;
+            max-width: 996px;
+            max-height: 700px;
         }
 
         /* 自定义导航按钮样式 */
@@ -4859,9 +4860,9 @@ Prof. Zhan is an IEEE Fellow. He was a recipient of the IEEE Computational Intel
   <script>
       const swiper = new Swiper('.mySwiper', {
           loop: true, // 启用循环播放
-          autoHeight: true,
+          // autoHeight: true,
           autoplay: {
-              delay: 2000, // 每2秒切换
+              delay: 1500, // 每2秒切换
               disableOnInteraction: false, // 用户交互后继续自动播放
           },
           navigation: {
