@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./MMDO_FILES/bootstrap.min.css">
   <link href="./MMDO_FILES/css" rel="stylesheet" type="text/css">
   <link href="./MMDO_FILES/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <script type="text/javascript">
     function displayDate(dt, showDateDifference) {
       var hour = dt.getHours();
@@ -3855,6 +3856,66 @@
         transform: rotate(0deg);
       }
     }
+
+    /* 容器样式 */
+        .swiper {
+            width: 100%;
+            height: 270px; /* 限制最大宽度，防止过宽 */
+            margin: 0 auto;
+            overflow: hidden;
+            max-width: 996px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%; /* 继承容器高度 */
+            overflow: hidden; /* 防止图片溢出 */
+        }
+
+        .swiper-slide img {
+            width: auto; /* 保持比例 */
+            height: auto; /* 保持比例 */
+            object-fit: contain; /* 确保图片完整显示 */
+            display: block;
+            max-width: 996px;
+            max-height: 270px;
+        }
+
+        /* 自定义导航按钮样式 */
+        .swiper-button-prev,
+        .swiper-button-next {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            opacity: 0; /* 默认隐藏 */
+            transition: opacity 0.3s ease;
+        }
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* 鼠标悬停显示导航按钮 */
+        .swiper:hover .swiper-button-prev,
+        .swiper:hover .swiper-button-next {
+            opacity: 1;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        
   </style>
 </head>
 
@@ -3862,11 +3923,63 @@
 
 
 <body>
+  
   <!-- style="padding-top: 0;padding-left: 0;padding-right: 0;" -->
   <div class="container">
     <div align="center">
       <!-- <a href="https://ijcai24.org/" target="_blank">-->
-      <img border="0" width="100%" src="./MMDO_FILES/zhutu-new.png">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img border="0" width="100%" src="./MMDO_FILES/zhutu-new.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="./MMDO_FILES/1.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/2.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/3.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/4.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/6.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/7.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/8.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/9.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/10.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/11.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/12.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/13.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/14.jpg" alt="MMDO2025">
+          </div>
+          <div class="swiper-slide">
+              <img src="./MMDO_FILES/15.jpg" alt="MMDO2025">
+          </div>
+        </div>
+        <!-- 导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
       <!-- </a>  -->
       <p>
       </p>
@@ -4736,5 +4849,34 @@ Prof. Zhan is an IEEE Fellow. He was a recipient of the IEEE Computational Intel
   </div>
 </div> -->
 </body>
+
+  <!-- 引入 Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- 初始化 Swiper -->
+  <script>
+      const swiper = new Swiper('.mySwiper', {
+          loop: true, // 启用循环播放
+          autoHeight: true,
+          autoplay: {
+              delay: 2000, // 每2秒切换
+              disableOnInteraction: false, // 用户交互后继续自动播放
+          },
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+          // 鼠标悬停暂停/恢复自动播放
+          on: {
+              init: function () {
+                  this.el.addEventListener('mouseenter', () => {
+                      this.autoplay.stop();
+                  });
+                  this.el.addEventListener('mouseleave', () => {
+                      this.autoplay.start();
+                  });
+              },
+          },
+      });
+  </script>
 
 </html>
